@@ -1,0 +1,43 @@
+{
+    "template": {
+        "welcome": "欢迎"
+    },
+    "label": {
+        "username": "用户名：",
+        "password": "密  码：",
+        "rememberme": "记住我",
+        "email": "邮  箱：",
+        "confirm_pwd": "确认密码：",
+        "nickname": "昵  称：",
+        "location": "所在区域：",
+        "gender": "性  别：",
+        "gender_secret": "保密",
+        "gender_man": "男",
+        "gender_woman": "女",
+        "social_account": "社交账号：",
+        "personal_profile": "个人简介：",
+        "head_protrait": "头  像：",
+        "telephone": "联系电话："
+    },
+    "button": {
+        "login": "登录",
+        "upload_head_protrait": "上传头像"
+    },
+    "placeholder": {
+        "username": "在此处输入用户名",
+        "password": "在此处输入密码",
+        "email": "在此处输入邮箱",
+        "confirm_pwd": "请再次输入密码确认",
+        "nickname": "在此处输入昵称",
+        "location": "在此处输入所在区域",
+        "social_account": "在此处输入其他社交账号",
+        "telephone": "在此处输入联系电话",
+        "personal_profile": "在此处输入个人简介"
+    },
+    "prompt": {
+        "confirm_pwd": "两次输入的密码不一致"
+    },
+    "alt": {
+        "head_protrait": "没有图片"
+    }
+}

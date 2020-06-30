@@ -1,0 +1,43 @@
+{
+    "template": {
+        "welcome": "welcome"
+    },
+    "label": {
+        "username": "Username:",
+        "password": "Password:",
+        "rememberme": "Remember me",
+        "email": "Email:",
+        "confirm_pwd": "Password again:",
+        "nickname": "Nick name:",
+        "location": "Location:",
+        "gender": "Gender:",
+        "gender_secret": "Secret",
+        "gender_man": "Man",
+        "gender_woman": "Woman",
+        "social_account": "Social account:",
+        "personal_profile": "Personal profile:",
+        "head_protrait": "Head protrait:",
+        "telephone": "Telephone:"
+    },
+    "button": {
+        "login": "Log in",
+        "upload_head_protrait": "Upload head protrait"
+    },
+    "placeholder": {
+        "username": "Input your username here",
+        "password": "Input your password here",
+        "email": "Input your email here",
+        "confirm_pwd": "Confirm your password here",
+        "nickname": "Input your nickname here",
+        "location": "Input your location here",
+        "social_account": "Input your social account",
+        "telephone": "Input your telephone",
+        "personal_profile": "Input your personal profile"
+    },
+    "prompt": {
+        "confirm_pwd": "Passwords are different"
+    },
+    "alt": {
+        "head_protrait": "No picture"
+    }
+}
