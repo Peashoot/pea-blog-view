@@ -2,7 +2,7 @@
     <p>
         <label for="txt_social_account">{{$t('label.social_account')}}</label>
         <input type="text" name="social_account" id="txt_social_account" v-bind:placeholder='$t("placeholder.social_account")'
-	    :value="currentValue" @input="handleInput">
+	    :value="currentValue" @input="handleInput" maxlength="30">
     </p>
 </template>
 <script>

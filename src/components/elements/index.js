@@ -1,3 +1,7 @@
+export { default as RequiredFlag }
+from './RequiredFlag'
+export { default as WarningLabel }
+from './WarningLabel'
 export { default as UsernameInput }
 from './UsernameInput'
 export { default as PasswordInput }
@@ -22,3 +26,5 @@ export { default as TelephoneInput }
 from './TelephoneInput'
 export { default as SocialAccountInput }
 from './SocialAccountInput'
+export { default as UsernameOrEmailInput }
+from './UsernameOrEmailInput'

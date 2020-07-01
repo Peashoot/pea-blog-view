@@ -1,17 +1,17 @@
 <template>
-    <form method="post">
-        <email v-model="email"></email>
-        <username v-model="username"></username>
-        <password v-model="password"></password>
-        <passwordCheck v-model="pwd_check" :compare="password"></passwordCheck>
-        <nickname></nickname>
-        <gender></gender>
-        <location></location>
-        <head-protrait></head-protrait>
-        <social-account></social-account>
-        <telephone></telephone>
-        <profile></profile>
-    </form>
+    <div>
+        <email v-model="email" required="true" :showWarning="emptyEmail" />
+        <username v-model="username" required="true" :showWarning="emptyUsername" />
+        <password v-model="password" required="true" :showWarning="emptyPassword" />
+        <passwordCheck v-model="pwd_check" :compare="password" required="true" />
+        <nickname v-model="nickname" required="true" :showWarning="emptyNickname" />
+        <gender v-model="gender" />
+        <location v-model="location" />
+        <head-protrait v-model="headProtrait" />
+        <social-account v-model="socialAccount" />
+        <telephone v-model="telephone" />
+        <profile v-model="profile" :limitLength="limitLength" />
+    </div>
 </template>
 <script>
 import {EmailInput, UsernameInput, PasswordInput, PasswordCheckInput,
@@ -20,12 +20,24 @@ NicknameInput,PersonalProfileInput
 } from "@/components/elements";
 export default {
     name: "Register",
-    data: function () {
+    data() {
         return {
             email: '',
-            username: '' ,
+            username: '',
             password: '',
-            pwd_check: false
+            pwd_check: false,
+            nickname: '',
+            gender: "0",
+            location: '',
+            headProtrait: '',
+            socialAccount: '',
+            telephone: '',
+            profile: '',
+            limitLength: 300,
+            emptyUsername: false,
+            emptyNickname: false,
+            emptyPassword: false,
+            emptyEmail: false
         }
     },
     components: {

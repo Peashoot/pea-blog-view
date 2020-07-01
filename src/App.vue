@@ -3,7 +3,6 @@
     <!-- <img src="./assets/logo.png"> -->
     <button @click="showAsChinese">中文</button>
     <button @click="showAsEnglish">English</button>
-    <p>{{$t('template.welcome')}}</p>
     <router-view/>
   </div>
 </template>

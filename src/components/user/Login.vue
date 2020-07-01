@@ -1,25 +1,24 @@
 <template>
-    <form id="login-form" method="post">
-        <username v-model="username"></username>
-        <password v-model="password"></password>
+    <div>
+        <nameoremail v-model="nameOrEmail"  required="true" :showWarning="emptyAccount" />
+        <password v-model="password"  required="true" :showWarning="emptyPassword" />
         <p>
-        <rememberme v-model="rememberme"></rememberme>
+        <rememberme v-model="rememberme" />
         <input type="submit" v-bind:value="$t('button.login')" v-on:click="userLogin">
         </p>
-      <div>{{password}}</div>
-    </form>
+    </div>
 </template>
 <script>
-import UsernameInput from "../elements/UsernameInput";
-import PasswordInput from "../elements/PasswordInput";
-import RememberCheck from "../elements/RememberCheck";
+import { UsernameOrEmailInput, PasswordInput, RememberCheck } from "@/components/elements";
 export default {
   name: 'Login',
   data () {
     return {
-      username: '',
+      nameOrEmail: '',
       password: '',
-      rememberme: false
+      rememberme: true,
+      emptyAccount: false,
+      emptyPassword: false
     }
   },
   methods: {
@@ -31,12 +30,18 @@ export default {
       }
   },
   components: {
-    "username": UsernameInput,
+    "nameoremail": UsernameOrEmailInput,
     "password": PasswordInput,
     "rememberme": RememberCheck
   }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+.required {
+    visibility:hidden;
+}
+</style>
 <style scoped>
+
 </style>

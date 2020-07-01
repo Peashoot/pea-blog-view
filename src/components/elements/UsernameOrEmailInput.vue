@@ -1,14 +1,14 @@
 <template>
     <p>
         <require :required="required" />
-        <label for="txt_nickname">{{$t('label.nickname')}}</label>
-        <input type="text" name="nickname" id="txt_nickname" v-bind:placeholder='$t("placeholder.nickname")'
-	    :value="currentValue" @input="handleInput" maxlength="20">
-        <warning v-if="isEmpty && required == 'true'" :warning="$t('prompt.empty_nickname')"/>
+        <label for="txt_name_or_email">{{$t('label.name_or_email')}}</label>
+        <input type="text" name="nameOrEmail" id="txt_name_or_email" v-bind:placeholder='$t("placeholder.name_or_email")'
+	    :value="currentValue" @input="handleInput" maxlength="30">
+        <warning v-if="isEmpty && required == 'true'" :warning="$t('prompt.empty_name_or_email')"/>
     </p>
 </template>
 <script>
-import { RequiredFlag, WarningLabel} from "@/components/elements";
+import {RequiredFlag, WarningLabel} from "@/components/elements";
 export default {
     data: function() {
         return {

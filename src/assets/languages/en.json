@@ -17,7 +17,8 @@
         "social_account": "Social account:",
         "personal_profile": "Personal profile:",
         "head_protrait": "Head protrait:",
-        "telephone": "Telephone:"
+        "telephone": "Telephone:",
+        "name_or_email": "Username or email:"
     },
     "button": {
         "login": "Log in",
@@ -30,12 +31,19 @@
         "confirm_pwd": "Confirm your password here",
         "nickname": "Input your nickname here",
         "location": "Input your location here",
-        "social_account": "Input your social account",
-        "telephone": "Input your telephone",
-        "personal_profile": "Input your personal profile"
+        "social_account": "Input your social account here",
+        "telephone": "Input your telephone here",
+        "personal_profile": "Input your personal profile here",
+        "name_or_email": "Input your username or email here"
     },
     "prompt": {
-        "confirm_pwd": "Passwords are different"
+        "confirm_pwd": "Passwords are different",
+        "page_not_found": "The page your find is missing",
+        "empty_username": "Username can not be empty",
+        "empty_nickname": "Nickname can not be empty",
+        "empty_password": "Password can not be empty",
+        "empty_email": "Email can not be empty",
+        "empty_name_or_email": "Account can not be empty"
     },
     "alt": {
         "head_protrait": "No picture"

@@ -17,7 +17,8 @@
         "social_account": "社交账号：",
         "personal_profile": "个人简介：",
         "head_protrait": "头  像：",
-        "telephone": "联系电话："
+        "telephone": "联系电话：",
+        "name_or_email": "用户名或密码："
     },
     "button": {
         "login": "登录",
@@ -32,10 +33,17 @@
         "location": "在此处输入所在区域",
         "social_account": "在此处输入其他社交账号",
         "telephone": "在此处输入联系电话",
-        "personal_profile": "在此处输入个人简介"
+        "personal_profile": "在此处输入个人简介",
+        "name_or_email": "在此处输入用户名或邮箱"
     },
     "prompt": {
-        "confirm_pwd": "两次输入的密码不一致"
+        "confirm_pwd": "两次输入的密码不一致",
+        "page_not_found": "你来到了没有知识的荒原",
+        "empty_username": "用户名不能为空",
+        "empty_nickname": "昵称不能为空",
+        "empty_password": "密码不能为空",
+        "empty_email": "邮箱不能为空",
+        "empty_name_or_email": "账号不能为空"
     },
     "alt": {
         "head_protrait": "没有图片"
