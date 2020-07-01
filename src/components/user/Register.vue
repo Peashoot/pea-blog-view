@@ -3,7 +3,7 @@
         <email v-model="email" required="true" :showWarning="emptyEmail" />
         <username v-model="username" required="true" :showWarning="emptyUsername" />
         <password v-model="password" required="true" :showWarning="emptyPassword" />
-        <passwordCheck v-model="pwd_check" :compare="password" required="true" />
+        <confirm v-model="pwd_check" :compare="password" required="true" />
         <nickname v-model="nickname" required="true" :showWarning="emptyNickname" />
         <gender v-model="gender" />
         <location v-model="location" />
@@ -44,7 +44,7 @@ export default {
         "email": EmailInput,
         "username": UsernameInput,
         "password": PasswordInput,
-        "passwordCheck": PasswordCheckInput,
+        "confirm": PasswordCheckInput,
         "nickname": NicknameInput,
         "gender": GenderInput,
         "location": LocationInput,
