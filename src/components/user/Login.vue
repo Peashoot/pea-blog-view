@@ -6,29 +6,46 @@
         <rememberme v-model="rememberme" />
         <input type="submit" v-bind:value="$t('button.login')" v-on:click="userLogin">
         </p>
+        <div>{{nameOrEmail}}</div>
     </div>
 </template>
 <script lang='ts'>
-import { UsernameOrEmailInput, PasswordInput, RememberCheck } from '../elements/index';
-export default {
-  name: 'Login',
-  data () {
-    return {
-      nameOrEmail: '',
-      password: '',
-      rememberme: true,
-      emptyAccount: false,
-      emptyPassword: false
-    }
-  },
-  methods: {
-      userLogin() {
-      }
-  },
+import { UsernameOrEmailInput, PasswordInput, RememberCheck } from '@/components/elements/index';
+import { Component, Vue } from 'vue-property-decorator'
+
+@Component({
   components: {
     "nameoremail": UsernameOrEmailInput,
     "password": PasswordInput,
-    "rememberme": RememberCheck
+    "rememberme": RememberCheck,
+  },
+})
+
+export default class extends Vue {
+  /**
+   * 用户名或邮箱
+   */
+  nameOrEmail: string = ''
+  /**
+   * 密码
+   */
+  password: string = ''
+  /**
+   * 记住我
+   */
+  rememberme: boolean = true
+  /**
+   * 账号是否为空
+   */
+  emptyAccount: boolean = false
+  /**
+   * 密码是否为空
+   */
+  emptyPassword: boolean = false
+  /**
+   * 用户登录（POST请求）
+   */
+  userLogin() {
   }
 }
 </script>

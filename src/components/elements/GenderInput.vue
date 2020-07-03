@@ -9,30 +9,43 @@
         <label for="rdo_gender_woman">{{$t('label.gender_woman')}}</label>
     </p>
 </template>
-<script>
-export default {
-    props: {
-        value: String
-    },
-    methods: {
-        handleInput(event) {
-            let value = event.target.value;
-            this.$emit('input', value);
-        }
-    },
-    watch: {
-        "value": function(newVal, oldVal) {
-            switch (newVal) {
-                case "1":
-                    this.$refs.rdo_gender_man.checked = 'checked';
-                    break;
-                case "2":
-                    this.$refs.rdo_gender_woman.checked = 'checked';
-                    break;
-                default:
-                    this.$refs.rdo_gender_secret.checked = 'checked';
-                    break;
-            }
+<script lang='ts'>
+import { Component, Vue, Prop, Watch, Ref } from "vue-property-decorator";
+@Component
+export default class extends Vue {
+    /**
+     * 性别值 0 保密 1 男 2 女
+     */
+    @Prop()
+    value!: string
+    /**
+     * 将当前组件的值传到上一层
+     */
+    handleInput(event: any) {
+        let value = event.target.value;
+        this.$emit('input', value);
+    }
+    @Ref('rdo_gender_man')
+    readonly rdoGenderMan!: HTMLInputElement
+
+    @Ref('rdo_gender_woman')
+    readonly rdoGenderWoman!: HTMLInputElement
+
+    @Ref('rdo_gender_secret')
+    readonly rdoGenderSecret!: HTMLInputElement
+
+    @Watch('value')
+    onValueChanged(newVal: string, oldVal: string) {
+        switch (newVal) {
+            case "1":
+                this.rdoGenderMan.checked = true;
+                break;
+            case "2":
+                this.rdoGenderWoman.checked = true;
+                break;
+            default:
+                this.rdoGenderSecret.checked = true;
+                break;
         }
     }
 }

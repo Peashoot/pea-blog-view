@@ -9,28 +9,11 @@
     <profile v-model="profile" :limitLength="limitLength" />
 </div>
 </template>
-<script>
-import {LocationInput, GenderInput, HeadPortraitInput,SocialAccountInput
-, TelephoneInput, NicknameInput,PersonalProfileInput
-} from "@/components/elements";
-export default {
-    name: "ChangeDetail",
-    data() {
-        return {
-            nickname: '',
-            gender: "0",
-            location: '',
-            headProtrait: '',
-            socialAccount: '',
-            telephone: '',
-            profile: '',
-            limitLength: 300,
-            emptyNickname: false
-        }
-    },
-    props: {
-        username: String
-    },
+<script lang='ts'>
+import { LocationInput, GenderInput, HeadPortraitInput,SocialAccountInput
+, TelephoneInput, NicknameInput,PersonalProfileInput } from "@/components/elements";
+import { Component, Prop, Vue } from "vue-property-decorator";
+@Component({
     components: {
         "nickname": NicknameInput,
         "gender": GenderInput,
@@ -39,6 +22,55 @@ export default {
         "socialAccount":SocialAccountInput,
         "telephone": TelephoneInput,
         "profile": PersonalProfileInput
+    }
+})
+
+export default class extends Vue {
+    /**
+     * 昵称
+     */
+    nickname: string = ''
+    /**
+     * 性别
+     */
+    gender:  string = "0"
+    /**
+     * 地区
+     */
+    location:  string = ''
+    /**
+     * 头像链接
+     */
+    headProtrait:  string = ''
+    /**
+     * 社交账号
+     */
+    socialAccount:  string = ''
+    /**
+     * 联系电话
+     */
+    telephone:  string = ''
+    /**
+     * 个人简介
+     */
+    profile:  string = ''
+    /**
+     * 个人简介长度限制
+     */
+    limitLength: number = 300
+    /**
+     * 昵称是否为空
+     */
+    emptyNickname: boolean = false
+    /**
+     * 用户名
+     */
+    @Prop({default: ''})
+    username: string
+
+    constructor() {
+        super()
+        this.username = ''
     }
 }
 </script>

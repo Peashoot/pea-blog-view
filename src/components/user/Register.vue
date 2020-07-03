@@ -13,33 +13,13 @@
         <profile v-model="profile" :limitLength="limitLength" />
     </div>
 </template>
-<script>
-import {EmailInput, UsernameInput, PasswordInput, PasswordCheckInput,
+<script lang='ts'>
+import { EmailInput, UsernameInput, PasswordInput, PasswordCheckInput,
 LocationInput, GenderInput, HeadPortraitInput,SocialAccountInput, TelephoneInput,
-NicknameInput,PersonalProfileInput
-} from "@/components/elements";
-export default {
-    name: "Register",
-    data() {
-        return {
-            email: '',
-            username: '',
-            password: '',
-            pwd_check: false,
-            nickname: '',
-            gender: "0",
-            location: '',
-            headProtrait: '',
-            socialAccount: '',
-            telephone: '',
-            profile: '',
-            limitLength: 300,
-            emptyUsername: false,
-            emptyNickname: false,
-            emptyPassword: false,
-            emptyEmail: false
-        }
-    },
+NicknameInput,PersonalProfileInput } from "@/components/elements";
+import { Component, Vue } from "vue-property-decorator";
+
+@Component({
     components: {
         "email": EmailInput,
         "username": UsernameInput,
@@ -53,6 +33,74 @@ export default {
         "telephone": TelephoneInput,
         "profile": PersonalProfileInput
     }
+})
+
+export default class extends Vue {
+    /**
+     * 邮箱
+     */
+    email: string = ''
+    /**
+     * 用户名
+     */
+    username: string = ''
+    /**
+     * 密码
+     */
+    password: string = ''
+    /**
+     * 二次密码校验
+     */
+    pwd_check: boolean = false
+    /**
+     * 昵称
+     */
+    nickname: string = ''
+    /**
+     * 性别
+     */
+    gender: string = "0"
+    /**
+     * 地区
+     */
+    location: string = ''
+    /**
+     * 头像链接
+     */
+    headProtrait: string = ''
+    /**
+     * 社交账号
+     */
+    socialAccount: string = ''
+    /**
+     * 手机号
+     */
+    telephone: string = ''
+    /**
+     * 个人简介
+     */
+    profile: string = ''
+    /**
+     * 个人简介限制长度
+     */
+    limitLength: number = 300
+    /**
+     * 用户名是否为空
+     */
+    emptyUsername: boolean = false
+    /**
+     * 昵称是否为空
+     */
+    emptyNickname: boolean = false
+    /**
+     * 密码是否为空
+     */
+    emptyPassword: boolean = false
+    /**
+     * 邮箱是否为空
+     */
+    emptyEmail: boolean = false
+    
 }
 </script>
 <style scoped>
