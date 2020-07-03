@@ -1,30 +1,32 @@
 export { default as RequiredFlag }
-from './RequiredFlag'
+from './RequiredFlag.vue'
 export { default as WarningLabel }
-from './WarningLabel'
+from './WarningLabel.vue'
+export { default as LanguageButton }
+from './LanguageButton.vue'
 export { default as UsernameInput }
-from './UsernameInput'
+from './UsernameInput.vue'
 export { default as PasswordInput }
-from './PasswordInput'
+from './PasswordInput.vue'
 export { default as EmailInput }
-from './EmailInput'
+from './EmailInput.vue'
 export { default as PasswordCheckInput }
-from './PasswordConfirmInput'
+from './PasswordConfirmInput.vue'
 export { default as GenderInput }
-from './GenderInput'
+from './GenderInput.vue'
 export { default as HeadPortraitInput }
-from './HeadPortraitInput'
+from './HeadPortraitInput.vue'
 export { default as LocationInput }
-from './LocationInput'
+from './LocationInput.vue'
 export { default as NicknameInput }
-from './NickNameInput'
+from './NickNameInput.vue'
 export { default as PersonalProfileInput }
-from './PersonalProfileInput'
+from './PersonalProfileInput.vue'
 export { default as RememberCheck }
-from './RememberCheck'
+from './RememberCheck.vue'
 export { default as TelephoneInput }
-from './TelephoneInput'
+from './TelephoneInput.vue'
 export { default as SocialAccountInput }
-from './SocialAccountInput'
+from './SocialAccountInput.vue'
 export { default as UsernameOrEmailInput }
-from './UsernameOrEmailInput'
+from './UsernameOrEmailInput.vue'

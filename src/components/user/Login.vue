@@ -8,8 +8,8 @@
         </p>
     </div>
 </template>
-<script>
-import { UsernameOrEmailInput, PasswordInput, RememberCheck } from "@/components/elements";
+<script lang='ts'>
+import { UsernameOrEmailInput, PasswordInput, RememberCheck } from '../elements/index';
 export default {
   name: 'Login',
   data () {
@@ -23,10 +23,6 @@ export default {
   },
   methods: {
       userLogin() {
-        this.$axios.get("https://www.baidu.com/")
-        .then(res => {
-            console.log("接收到返回信息：", res);
-        });
       }
   },
   components: {

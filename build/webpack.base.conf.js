@@ -14,19 +14,18 @@ module.exports = {
     context: path.resolve(__dirname, '../'),
     // 编译入口文件
     entry: {
-        app: './src/main.js'
+        app: './src/main.ts'
     },
     // 编译输出路径
     output: {
         path: config.build.assetsRoot,
         filename: '[name].js',
         publicPath: process.env.NODE_ENV === 'production' ?
-            config.build.assetsPublicPath :
-            config.dev.assetsPublicPath
+            config.build.assetsPublicPath : config.dev.assetsPublicPath
     },
     // 一些解决方案配置
     resolve: {
-        extensions: ['.js', '.vue', '.json'],
+        extensions: ['.js', '.vue', '.json', '.ts', '.tsx'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': resolve('src'),
@@ -65,6 +64,21 @@ module.exports = {
                 options: {
                     limit: 10000,
                     name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+                }
+            },
+            // 从这里复制下面的代码就可以了
+            {
+                test: /\.ts$/,
+                exclude: /node_modules/,
+                enforce: 'pre',
+                loader: 'tslint-loader'
+            },
+            {
+                test: /\.tsx?$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/,
+                options: {
+                    appendTsSuffixTo: [/\.vue$/],
                 }
             }
         ]

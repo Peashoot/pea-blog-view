@@ -1,22 +1,29 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <button @click="showAsChinese">中文</button>
-    <button @click="showAsEnglish">English</button>
+    <language lang="zh" langDesc="中文" @input="changeLang" />
+    <language lang="en" langDesc="English" @input="changeLang" />
     <router-view/>
   </div>
 </template>
 
-<script>
+<script lang='js'>
+import { LanguageButton } from "./components/elements/index";
 export default {
   name: 'App',
-  methods: {
-    showAsChinese() {
-      this.$i18n.locale = 'zh';
-    },
-    showAsEnglish() {
-      this.$i18n.locale = 'en';
+  data(){
+    return {
+      lang: 'zh'
     }
+  },
+  methods: {
+    // 修改界面语言
+    changeLang(event) {
+      this.$i18n.locale = event;
+    }
+  },
+  components: {
+    "language": LanguageButton
   }
 }
 </script>

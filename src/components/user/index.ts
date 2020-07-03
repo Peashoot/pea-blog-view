@@ -1,8 +1,8 @@
 export { default as Login }
-from './Login'
+from './Login.vue'
 export { default as Register }
-from './Register'
+from './Register.vue'
 export { default as ChangePwd }
-from './ChangePwd'
+from './ChangePwd.vue'
 export { default as ChangeDetail }
-from './ChangeDetail'
+from './ChangeDetail.vue'
