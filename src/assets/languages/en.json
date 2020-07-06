@@ -18,11 +18,20 @@
         "personal_profile": "Personal profile:",
         "head_protrait": "Head protrait:",
         "telephone": "Telephone:",
-        "name_or_email": "Username or email:"
+        "name_or_email": "Username or email:",
+        "author": "Author:",
+        "keyword": "Keywords:",
+        "profile": "Profile:",
+        "publish_type": "Select public type:",
+        "publish_immediately": "Public immediately",
+        "publish_storage": "Storage for now",
+        "publish_timing": "Timed publish",
+        "time_publish_timing": "Select publish time:"
     },
     "button": {
         "login": "Log in",
-        "upload_head_protrait": "Upload head protrait"
+        "upload_head_protrait": "Upload head protrait",
+        "save_article": "Save article"
     },
     "placeholder": {
         "username": "Input your username here",
@@ -34,7 +43,11 @@
         "social_account": "Input your social account here",
         "telephone": "Input your telephone here",
         "personal_profile": "Input your personal profile here",
-        "name_or_email": "Input your username or email here"
+        "name_or_email": "Input your username or email here",
+        "title": "Input title of article here",
+        "author": "Input author of article here",
+        "keyword": "Input keywords of article here",
+        "article_profile": "Input profile of article here"
     },
     "prompt": {
         "confirm_pwd": "Passwords are different",
@@ -43,7 +56,10 @@
         "empty_nickname": "Nickname can not be empty",
         "empty_password": "Password can not be empty",
         "empty_email": "Email can not be empty",
-        "empty_name_or_email": "Account can not be empty"
+        "empty_name_or_email": "Account can not be empty",
+        "empty_title": "Title can not be empty",
+        "empty_author": "Author can not be empty",
+        "empty_keyword": "Keywords can not be empty"
     },
     "alt": {
         "head_protrait": "No picture"

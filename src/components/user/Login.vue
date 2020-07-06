@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nameoremail v-model="nameOrEmail"  required="true" :showWarning="emptyAccount" />
+        <nameoremail v-model="nameOrEmail"  required="true" :showWarning="emptyAccount" id='nameOrEmail' />
         <password v-model="password"  required="true" :showWarning="emptyPassword" />
         <p>
         <rememberme v-model="rememberme" />
@@ -55,5 +55,4 @@ export default class Login extends Vue {
 }
 </style>
 <style scoped>
-
 </style>
