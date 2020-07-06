@@ -8,7 +8,7 @@
 <script lang='ts'>
 import { Component, Vue, Prop } from "vue-property-decorator";
 @Component
-export default class extends Vue {
+export default class LocationInput extends Vue {
     /**
      * 上层组件传的值
      */

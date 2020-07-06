@@ -34,8 +34,7 @@ import { Component, Vue } from "vue-property-decorator";
         "profile": PersonalProfileInput
     }
 })
-
-export default class extends Vue {
+export default class Register extends Vue {
     /**
      * 邮箱
      */

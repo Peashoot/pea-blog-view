@@ -25,7 +25,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
     }
 })
 
-export default class extends Vue {
+export default class ChangeDetail extends Vue {
     /**
      * 昵称
      */

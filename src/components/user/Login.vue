@@ -20,8 +20,7 @@ import { Component, Vue } from 'vue-property-decorator'
     "rememberme": RememberCheck,
   },
 })
-
-export default class extends Vue {
+export default class Login extends Vue {
   /**
    * 用户名或邮箱
    */

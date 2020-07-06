@@ -7,35 +7,53 @@
         <warning v-if="isEmpty && required == 'true'" :warning="$t('prompt.empty_username')"/>
     </p>
 </template>
-<script>
-import {RequiredFlag, WarningLabel} from "@/components/elements";
-export default {
-    data: function() {
-        return {
-            currentValue: this.value,
-            isEmpty: false
-        }
-    },
-    props: {
-        value: String,
-        required: String,
-        showWarning: Boolean
-    },
-    methods: {
-        handleInput(event) {
-            let value = event.target.value;
-            this.isEmpty = value == '';
-            this.$emit('input', value);
-        }
-    },
-    watch: {
-        "showWarning": function(newVal, oldVal) {
-            this.isEmpty = newVal;
-        }
-    },
+<script lang='ts'>
+import { RequiredFlag, WarningLabel } from "@/components/elements";
+import { Component, Vue, Prop, Watch } from "vue-property-decorator";
+@Component({
     components: {
         "require": RequiredFlag,
         "warning": WarningLabel
+    }
+})
+export default class UsernameInput extends Vue {
+    /**
+     * 上层传入值
+     */
+    @Prop()
+    value!: string
+    /**
+     * 是否必填
+     */
+    @Prop()
+    required!: string
+    /**
+     * 是否显示提示
+     */
+    @Prop()
+    showWarning!: boolean
+    /**
+     * 当前值
+     */
+    currentValue: string = this.value
+    /**
+     * 当前值是否为空
+     */
+    isEmpty: boolean = false
+    /**
+     * 将当前值传到上层
+     */
+    handleInput(event) {
+        let value = event.target.value;
+        this.isEmpty = value == '';
+        this.$emit('input', value);
+    }
+    /**
+     * 当前值改变时显示或隐藏提示
+     */
+    @Watch("showWarning")
+    onShowWarningChanged(newVal, oldVal) {
+        this.isEmpty = newVal;
     }
 }
 </script>

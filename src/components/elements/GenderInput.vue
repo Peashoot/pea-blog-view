@@ -12,7 +12,7 @@
 <script lang='ts'>
 import { Component, Vue, Prop, Watch, Ref } from "vue-property-decorator";
 @Component
-export default class extends Vue {
+export default class GenderInput extends Vue {
     /**
      * 性别值 0 保密 1 男 2 女
      */

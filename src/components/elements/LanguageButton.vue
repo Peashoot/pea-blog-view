@@ -4,7 +4,7 @@
 <script lang='ts'>
 import { Component, Vue, Prop } from "vue-property-decorator";
 @Component
-export default class extends Vue {
+export default class LanguageButton extends Vue {
     /**
      * 语言代码
      */

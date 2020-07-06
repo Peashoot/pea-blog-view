@@ -1,11 +1,15 @@
 <template>
     <span v-if='required=="true"' class='required'>*</span>
 </template>
-<script>
-export default {
-    props: {
-        required: String
-    }
+<script lang='ts'>
+import { Component, Vue, Prop } from "vue-property-decorator";
+@Component
+export default class RequiredFlag extends Vue {
+    /**
+     * 是否必填
+     */
+    @Prop()
+    required!: string
 }
 </script>
 <style scoped>

@@ -5,16 +5,21 @@
         :placeholder="$t('placeholder.personal_profile')"  @input="handleInput" :maxlength="limitLength"></textarea>
     </p>
 </template>
-<script>
-export default {
-    props: {
-        limitLength: Number
-    },
-    methods: {
-        handleInput(event) {
-            let value = event.target.value;
-            this.$emit('input', value);
-        }
+<script lang='ts'>
+import { Component, Vue, Prop } from "vue-property-decorator";
+@Component
+export default class PersonalProfileInput extends Vue {
+    /**
+     * 输入框的最大长度限制
+     */
+    @Prop()
+    limitLength!: number
+    /**
+     * 将输入框内容传到上层
+     */
+    handleInput(event) {
+        let value = event.target.value;
+        this.$emit('input', value);
     }
 }
 </script>

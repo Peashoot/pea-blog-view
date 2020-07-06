@@ -18,7 +18,7 @@ import { Component, Prop, Vue, Watch } from "vue-property-decorator";
     }
 })
 
-export default class extends Vue {
+export default class EmailInput extends Vue {
     /**
      * 外部传入的邮箱
      */

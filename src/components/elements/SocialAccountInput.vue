@@ -5,19 +5,25 @@
 	    :value="currentValue" @input="handleInput" maxlength="30">
     </p>
 </template>
-<script>
-export default {
-    data: function() {
-        return {
-            currentValue: this.value
-        }
-    },
-    props: ["value"],
-    methods: {
-        handleInput(event) {
-            let value = event.target.value;
-            this.$emit('input', value);
-        }
+<script lang='ts'>
+import { Component, Vue, Prop } from "vue-property-decorator";
+@Component
+export default class SocialAccountInput extends Vue {
+    /**
+     * 上层传入的值
+     */
+    @Prop()
+    value!: string
+    /**
+     * 当前值
+     */
+    currentValue: string = this.value
+    /**
+     * 将当前值通知给上层
+     */
+    handleInput(event) {
+        let value = event.target.value;
+        this.$emit('input', value);
     }
 }
 </script>

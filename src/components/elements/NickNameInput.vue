@@ -17,7 +17,7 @@ import { Component, Vue, Prop, Watch } from "vue-property-decorator";
     }
 })
 
-export default class extends Vue {
+export default class NickNameInput extends Vue {
     /**
      * 上层组件传的值
      */

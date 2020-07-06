@@ -14,7 +14,7 @@ import { Component, Vue, Prop } from "vue-property-decorator";
     }
 })
 
-export default class extends Vue {
+export default class ChangePwd extends Vue {
     /**
      * 密码
      */
